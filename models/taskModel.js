@@ -5,5 +5,18 @@ function getAllTasks() {
 }
 
 module.exports = {
-    getAllTasks
+    getAllTasks,
+    createTask
 };
+
+function createTask(taskData) {
+    const newTask = {
+        id: tasks.length + 1,
+        title: taskData.title,
+        completed: false
+    };
+
+    tasks.push(newTask);
+
+    return newTask;
+}

@@ -9,5 +9,6 @@ function createTask(taskData) {
 }
 
 module.exports = {
-    getAllTasks
+    getAllTasks,
+    createTask
 };
