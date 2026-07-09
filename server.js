@@ -15,6 +15,8 @@ app.use("/tasks", taskRoutes);
 
 const PORT = 3000;
 
+console.log("🚀 Starting Raven API...");
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
