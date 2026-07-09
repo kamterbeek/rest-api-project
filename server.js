@@ -6,9 +6,11 @@ app.use(express.json());
 
 const taskRoutes = require("./routes/taskRoutes");
 
+console.log(taskRoutes);
+
 // Root route
 app.get("/", (req, res) => {
-    res.send("Welcome to the Raven API");
+    res.send("Welcome Raven API");
 });
 
 app.use("/tasks", taskRoutes);
