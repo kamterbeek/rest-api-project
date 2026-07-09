@@ -6,6 +6,13 @@ function getAllTasks(req, res) {
     res.json(tasks);
 }
 
+function createTask(req, res) {
+    const newTask = taskService.createTask(req.body);
+
+    res.status(201).json(newTask);
+}
+
 module.exports = {
-    getAllTasks
+    getAllTasks,
+    createTask
 };
