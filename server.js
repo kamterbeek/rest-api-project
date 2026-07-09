@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Cassi's Health");
+    res.send("Welcome to the Raven API");
 });
 
 const PORT = 3000;
