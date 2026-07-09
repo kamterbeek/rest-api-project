@@ -9,6 +9,8 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Raven API");
 });
 
+app.use("/tasks", taskRoutes);
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
