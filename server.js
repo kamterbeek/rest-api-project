@@ -2,26 +2,32 @@ const express = require("express");
 
 const app = express();
 
+// Middleware
 app.use(express.json());
 
-const resolvedPath = require.resolve("./routes/taskRoutes");
-console.log("Loading routes from:", resolvedPath);
-
+// Load routes
 const taskRoutes = require("./routes/taskRoutes");
 
-console.log(taskRoutes);
+// Debugging
+console.log("Loading routes from:", require.resolve("./routes/taskRoutes"));
+console.log(
+  taskRoutes.stack.map(layer => ({
+    path: layer.route?.path,
+    methods: layer.route?.methods
+  }))
+);
 
 // Root route
 app.get("/", (req, res) => {
-    res.send("Welcome Raven API");
+    res.send("Welcome to the Raven API");
 });
 
+// Mount task routes
 app.use("/tasks", taskRoutes);
 
+// Start server
 const PORT = 3000;
 
-console.log("🚀 Starting Raven API...");
-
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
