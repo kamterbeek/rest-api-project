@@ -12,7 +12,7 @@ function createTask(req, res) {
     res.status(201).json(newTask);
 }
 
-module.exports = {
+module.export = {
     getAllTasks,
     createTask
 };
