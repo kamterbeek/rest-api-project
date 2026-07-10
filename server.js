@@ -5,7 +5,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-// Loadroutes
+//routes
 const taskRoutes = require("./routes/taskRoutes");
 
 // Debugging
