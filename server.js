@@ -4,6 +4,9 @@ const app = express();
 
 app.use(express.json());
 
+const resolvedPath = require.resolve("./routes/taskRoutes");
+console.log("Loading routes from:", resolvedPath);
+
 const taskRoutes = require("./routes/taskRoutes");
 
 console.log(taskRoutes);
