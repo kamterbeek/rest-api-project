@@ -15,5 +15,4 @@ It is being developed as part of my Software Design and Development coursework a
 - GitHub
 
 ## Status
-
 In Progress
