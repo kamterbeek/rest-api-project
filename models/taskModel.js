@@ -17,6 +17,6 @@ function createTask(taskData) {
     };
 
     tasks.push(newTask);
-
+    
     return newTask;
 }
